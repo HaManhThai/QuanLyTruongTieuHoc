@@ -10,14 +10,6 @@
                     <div class="col-sm-6">
                         <h3 class="mb-0"></h3>
                     </div>
-                    {{-- <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-end">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">
-                                Dashboard
-                            </li>
-                        </ol>
-                    </div> --}}
                 </div>
                 <!--end::Row-->
             </div>
@@ -36,14 +28,11 @@
                                 <h2 class="text-center">CHỈNH SỬA THÔNG TIN KHỐI</h2>
                             </div>
                             <div class="card-body">
-
                                 <div class="form-group">
                                     <label for="name">Tên Khối: </label>
                                     <input type="text" name="name" id="name" class="form-control"
                                         placeholder="Nhập tên..." value="{{ $data->TenKhoi }}" required>
                                 </div>
-                               
-                               
 
                             </div>
                             <div class="card-footer">

@@ -80,7 +80,7 @@
                                             <td class="text-center">{{ $stt }}</td>
                                             <td class="text-center">{{ $item->IDGV }}</td>
                                             <td class="text-center">{{ $item->TenGV }}</td>
-                                            <td class="text-center">{{ $item->NgaySinh }}</td>
+                                            <td class="text-center">{{ \Carbon\Carbon::parse($item->NgaySinh)->format('d/m/Y') }}</td>
                                             <td class="text-center">{{ $item->GioiTinh }}</td>
                                             <td class="text-center">{{ $item->SoDienThoai }}</td>
                                             <td class="text-center">

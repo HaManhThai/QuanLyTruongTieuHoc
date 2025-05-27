@@ -10,14 +10,6 @@
                     <div class="col-sm-6">
                         <h3 class="mb-0"></h3>
                     </div>
-                    {{-- <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-end">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">
-                                Dashboard
-                            </li>
-                        </ol>
-                    </div> --}}
                 </div>
                 <!--end::Row-->
             </div>
@@ -42,21 +34,18 @@
                                     <input type="text" name="name" id="name" class="form-control"
                                         placeholder="Nhập tên..." value="{{ $data->TenMH }}" required>
                                 </div>
-
                                 <div class="form-group my-3">
                                     <label for="khoi">Khối: </label> <br />
                                     <select name="khoi" id="khoi" required class="form-control">
                                         <option class="text-center">--Chọn khối--</option>
                                         @foreach ($data1 as $item)
-                                            <option value="{{ $item->IDKhoi }}" class="text-center">{{ $item->TenKhoi }}
+                                            <option @if ($item->IDKhoi == $data->IDKhoi) selected @endif
+                                                value="{{ $item->IDKhoi }}" class="text-center">{{ $item->TenKhoi }}
                                             </option>
                                         @endforeach
 
                                     </select>
                                 </div>
-
-
-
                             </div>
                             <div class="card-footer">
                                 <a href="{{ route('admins.mhBack') }}" class="btn btn-secondary">Back</a>

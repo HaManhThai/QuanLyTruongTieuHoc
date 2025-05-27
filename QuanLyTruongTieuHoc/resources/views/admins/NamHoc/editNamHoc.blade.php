@@ -10,14 +10,6 @@
                     <div class="col-sm-6">
                         <h3 class="mb-0"></h3>
                     </div>
-                    {{-- <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-end">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">
-                                Dashboard
-                            </li>
-                        </ol>
-                    </div> --}}
                 </div>
                 <!--end::Row-->
             </div>
@@ -40,7 +32,7 @@
                                 <div class="form-group">
                                     <label for="name">Tên năm học: </label>
                                     <input type="text" name="name" id="name" class="form-control"
-                                        placeholder="Nhập tên..." value="{{ $data->TenKhoi }}" required>
+                                        placeholder="Nhập tên..." value="{{ $data->TenNamHoc }}" required>
                                 </div>
                                
                                

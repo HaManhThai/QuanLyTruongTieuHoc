@@ -39,12 +39,13 @@
                                     <!--end::Header-->
                                     <!--begin::Body-->
                                     <div class="card-body">
-                                        <div class="input-group mb-3"> <span class="input-group-text"
-                                                id="basic-addon1">Tên học sinh</span> <input type="text" name="kitu" class="form-control"
-                                                placeholder="Name..." aria-label="Name"
-                                                aria-describedby="basic-addon1" value="{{ $kitu }}"> </div>
-                                        <div class="card-footer"> <button type="submit"
-                                                class="btn btn-success"> <i class="fa-solid fa-magnifying-glass"></i> Search</button> </div> <!--end::Footer-->
+                                        <div class="input-group mb-3"> <span class="input-group-text" id="basic-addon1">Tên
+                                                học sinh</span> <input type="text" name="kitu" class="form-control"
+                                                placeholder="Name..." aria-label="Name" aria-describedby="basic-addon1"
+                                                value="{{ $kitu }}"> </div>
+                                        <div class="card-footer"> <button type="submit" class="btn btn-success"> <i
+                                                    class="fa-solid fa-magnifying-glass"></i> Search</button> </div>
+                                        <!--end::Footer-->
                                     </div>
                                     <!--end::Body-->
                                     <!--begin::Footer-->
@@ -78,14 +79,14 @@
                                             <td class="text-center">{{ $stt }}</td>
                                             <td class="text-center">{{ $item->IDHS }}</td>
                                             <td class="text-center">{{ $item->TenHS }}</td>
-                                            <td class="text-center">{{ $item->NgaySinh }}</td>
+                                            <td class="text-center">{{ \Carbon\Carbon::parse($item->NgaySinh)->format('d/m/Y') }}</td>
                                             <td class="text-center">{{ $item->GioiTinh }}</td>
                                             <td class="text-center">{{ $item->DiaChi }}</td>
                                             <td class="text-center">{{ $item->TenLop }}</td>
                                             <td class="text-center">
-                                                <a href="{{ route('admins.HSEditGET',$item->IDHS) }}"
-                                                    class="btn btn-info"> <i class="fa-solid fa-pen-to-square"></i> EDIT</a>
-                                                <a href="{{ route('admins.HSDelete',$item->IDHS) }}" class="btn btn-danger"
+                                                <a href="{{ route('admins.HSEditGET', $item->IDHS) }}" class="btn btn-info">
+                                                    <i class="fa-solid fa-pen-to-square"></i> EDIT</a>
+                                                <a href="{{ route('admins.HSDelete', $item->IDHS) }}" class="btn btn-danger"
                                                     onclick="return confirm('Bạn có chắc chắn xoá thông tin của học sinh này?')">
                                                     <i class="fa-solid fa-trash"></i> DELETE
                                                 </a>
